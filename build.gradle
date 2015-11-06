@@ -14,8 +14,13 @@ apply plugin: 'kotlin'
 
 repositories {
     jcenter()
+    maven {
+        url 'http://repository.jetbrains.com/all'
+    }
 }
 
 dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-1103'
+    testCompile 'org.jetbrains.spek:spek:0.1.180'
+    testRuntime sourceSets.main.resources
 }
