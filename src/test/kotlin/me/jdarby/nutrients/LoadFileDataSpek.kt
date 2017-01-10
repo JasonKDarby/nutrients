@@ -1,16 +1,19 @@
 package me.jdarby.nutrients
 
+import com.winterbe.expekt.should
 import org.jetbrains.spek.api.Spek
-import kotlin.test.assertEquals
+import org.jetbrains.spek.api.dsl.given
+import org.jetbrains.spek.api.dsl.it
+import org.jetbrains.spek.api.dsl.on
 
-class LoadFileDataSpeks : Spek() { init {
+object LoadFileDataSpek : Spek({
 
     given("a collection of DATA_SRC records") {
         val DATA_SRC = load_DATA_SRC()
         on("counting the records") {
             val size = DATA_SRC.size
             it("has 681 records") {
-                assertEquals(681, size)
+                size.should.equal(681)
             }
         }
     }
@@ -20,7 +23,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = DATSRCLN.size
             it("has 244496 records") {
-                assertEquals(244496, size)
+                size.should.equal(244496)
             }
         }
     }
@@ -30,7 +33,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = DERIV_CD.size
             it("has 55 records") {
-                assertEquals(55, size)
+                size.should.equal(55)
             }
         }
     }
@@ -40,7 +43,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = FD_GROUP.size
             it("has 25 records") {
-                assertEquals(25, size)
+                size.should.equal(25)
             }
         }
     }
@@ -50,7 +53,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = FOOD_DES.size
             it("has 8789 records") {
-                assertEquals(8789, size)
+                size.should.equal(8789)
             }
         }
     }
@@ -60,7 +63,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = FOOTNOTE.size
             it("has 553 records") {
-                assertEquals(553, size)
+                size.should.equal(553)
             }
         }
     }
@@ -70,7 +73,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = LANGDESC.size
             it("has 774 records") {
-                assertEquals(774, size)
+                size.should.equal(774)
             }
         }
     }
@@ -80,7 +83,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = LANGUAL.size
             it("has 38301 records") {
-                assertEquals(38301, size)
+                size.should.equal(38301)
             }
         }
     }
@@ -90,7 +93,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = NUT_DATA.size
             it("has 679045 records") {
-                assertEquals(679045, size)
+                size.should.equal(679045)
             }
         }
     }
@@ -100,7 +103,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = NUTR_DEF.size
             it("has 150 records") {
-                assertEquals(150, size)
+                size.should.equal(150)
             }
         }
     }
@@ -110,7 +113,7 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = SRC_CD.size
             it("has 10 records") {
-                assertEquals(10, size)
+                size.should.equal(10)
             }
         }
     }
@@ -120,9 +123,9 @@ class LoadFileDataSpeks : Spek() { init {
         on("counting the records") {
             val size = WEIGHT.size
             it("has 15438 records") {
-                assertEquals(15438, size)
+                size.should.equal(15438)
             }
         }
     }
 
-}}
+})
